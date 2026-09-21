@@ -133,6 +133,16 @@
 
     </div>
 
+    <!-- Modal / Ventana Flotante para Reproducir Videos en el Sitio -->
+    <div id="videoModal" class="video-modal-overlay" style="display:none;">
+        <div class="video-modal-container">
+            <button type="button" class="video-modal-close" id="closeVideoModal">&times;</button>
+            <div class="video-modal-responsive">
+                <iframe id="youtubeIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="lang.js"></script>
     <script src="script.js"></script>
 </body>

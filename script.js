@@ -84,3 +84,56 @@ function navigateTo(section) {
         console.log(`Cargando protocolo: ${institutionalRoutes[section]}`);
     }
 }
+// --- CONTROLADOR DEL MODAL DE VIDEO FLOTANTE ---
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById('videoModal');
+    const iframe = document.getElementById('youtubeIframe');
+    const closeBtn = document.getElementById('closeVideoModal');
+
+    // Función auxiliar para extraer el ID del video de YouTube (maneja youtu.be y youtube.com)
+    function getYouTubeId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
+
+    // Interceptar clics en los enlaces de video de la página
+    document.querySelectorAll('a[href*="youtube.com"], a[href*="youtu.be"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            const videoId = getYouTubeId(href);
+
+            if (videoId) {
+                e.preventDefault(); // Evita que abra YouTube en otra pestaña
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                modal.style.display = 'flex';
+            }
+        });
+    });
+
+    // Función para cerrar el modal y apagar el video para que deje de sonar de fondo
+    function closeModal() {
+        modal.style.display = 'none';
+        iframe.src = ''; // Detiene la reproducción limpiando el src
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+    
+    // Cerrar también si hacen clic fuera del cuadro del video
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+});
