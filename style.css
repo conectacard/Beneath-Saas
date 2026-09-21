@@ -1,0 +1,392 @@
+/* Reset y Variables Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #03070d;
+    color: #ffffff;
+}
+
+/* Contenedor Principal con Fondo Enmallado Ciberespacial y Degradados Profesionales */
+.bunker-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: 
+        radial-gradient(circle at 50% 30%, rgba(0, 150, 255, 0.15) 0%, rgba(5, 11, 20, 0.95) 70%),
+        linear-gradient(135deg, #050b14 0%, #020408 100%),
+        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(0, 243, 255, 0.02) 40px, rgba(0, 243, 255, 0.02) 41px),
+        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0, 243, 255, 0.02) 40px, rgba(0, 243, 255, 0.02) 41px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+/* Selector de Idiomas Superior (Con texto en tono corporativo sobrio sobre fondo blanco) */
+.language-selector-wrapper {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffffff;
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    padding: 5px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.language-selector-wrapper label {
+    color: #050b14;
+    font-weight: 600;
+}
+
+.language-selector-wrapper select {
+    background: transparent;
+    color: #050b14;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Encabezado con Logotipo */
+.brand-header {
+    text-align: center;
+    margin-top: 35px;
+    z-index: 10;
+}
+
+.logo-container {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 6px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(0, 243, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+}
+
+.brand-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-title {
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(0, 243, 255, 0.6);
+}
+
+.brand-tagline {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    color: #8ab4f8;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+/* Espacio de Trabajo Principal */
+.main-workspace {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 10;
+    margin: auto 0;
+}
+
+/* Módulo Izquierdo: Video de Presentación y Título Dinámico */
+.video-preview-module {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.video-header-title {
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: #00f3ff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 2px;
+}
+
+.video-card-link {
+    text-decoration: none;
+    display: block;
+}
+
+.video-thumbnail-box {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(135deg, rgba(15, 28, 48, 0.9), rgba(5, 11, 20, 0.95));
+    border: 1px solid rgba(0, 243, 255, 0.35);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.video-thumbnail-box:hover {
+    border-color: rgba(0, 243, 255, 0.8);
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.play-glow-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 243, 255, 0.2);
+    border: 1px solid #00f3ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00f3ff;
+    font-size: 14px;
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+    margin-bottom: 6px;
+    padding-left: 2px;
+}
+
+.video-label {
+    font-size: 9.5px;
+    letter-spacing: 1.2px;
+    color: #8ab4f8;
+    font-weight: 700;
+}
+
+.compliance-highlight-box {
+    background: rgba(10, 18, 30, 0.7);
+    border-left: 3px solid #00f3ff;
+    padding: 10px 12px;
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+    margin-top: 4px;
+}
+
+.compliance-text-large {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #c0d1ff;
+    font-weight: 500;
+}
+
+/* Panel Central de Cristal (The Vault UI - Con Efecto Láser Muy Espaciado) */
+.vault-panel {
+    position: relative;
+    background: rgba(8, 16, 28, 0.65);
+    border: 1px solid rgba(0, 243, 255, 0.35);
+    border-radius: 18px;
+    padding: 22px;
+    width: 100%;
+    max-width: 580px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 243, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow: hidden;
+}
+
+/* Franja láser sutil que cruza de vez en cuando (cada 10 segundos, muy tenue y elegante) */
+.vault-panel::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        60deg,
+        transparent 45%,
+        rgba(0, 243, 255, 0.08) 50%,
+        transparent 55%
+    );
+    transform: rotate(30deg) translateY(-100%);
+    animation: infrequentLaserPulse 10s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes infrequentLaserPulse {
+    0%, 75% {
+        transform: rotate(30deg) translateY(-100%);
+    }
+    85% {
+        transform: rotate(30deg) translateY(100%);
+    }
+    100% {
+        transform: rotate(30deg) translateY(100%);
+    }
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+/* Botones con Iconos Monocromáticos Elegantes */
+.vault-btn {
+    background: rgba(15, 28, 48, 0.7);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    border-radius: 12px;
+    padding: 14px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vault-btn:hover {
+    background: rgba(0, 243, 255, 0.15);
+    border-color: rgba(0, 243, 255, 0.7);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+.vault-icon {
+    width: 22px;
+    height: 22px;
+    color: #00f3ff;
+    filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.5));
+}
+
+.vault-btn .btn-text {
+    font-size: 9.5px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+    color: #e2e8f0;
+}
+
+/* Botón CTA Principal */
+.cta-secure-mode {
+    background: linear-gradient(135deg, #00f3ff 0%, #0055ff 100%);
+    color: #03070d;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 25px rgba(0, 243, 255, 0.5);
+}
+
+.cta-secure-mode:hover {
+    opacity: 0.95;
+    box-shadow: 0 0 35px rgba(0, 243, 255, 0.8);
+}
+
+/* Módulo Derecho: Mockup Telefónico Girado y Acoplado */
+.phone-mockup-container {
+    width: 240px;
+    transform: rotate(4deg) translateY(10px);
+    pointer-events: none;
+    filter: drop-shadow(-15px 15px 35px rgba(0, 0, 0, 0.9));
+}
+
+.phone-mockup-container img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* Footer */
+.bunker-footer {
+    text-align: center;
+    font-size: 9.5px;
+    color: #64748b;
+    margin-bottom: 5px;
+    z-index: 10;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsividad */
+@media (max-width: 1100px) {
+    .main-workspace {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .video-preview-module, .phone-mockup-container {
+        display: none;
+    }
+    body, html {
+        overflow: auto;
+    }
+    .bunker-container {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+/* Selector interno para los videos por idioma */
+.video-lang-selector-box {
+    width: 100%;
+    margin-top: 2px;
+}
+
+.video-lang-selector-box select {
+    width: 100%;
+    background: rgba(15, 28, 48, 0.85);
+    color: #00f3ff;
+    border: 1px solid rgba(0, 243, 255, 0.4);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.video-lang-selector-box select:hover {
+    border-color: rgba(0, 243, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.video-lang-instruction {
+    font-size: 9px;
+    color: #94a3b8;
+    line-height: 1.3;
+    margin-top: 2px;
+}

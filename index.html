@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENEATH - Institutional Cybersecurity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bunker-container">
+
+        <!-- Selector de Idiomas Superior Central -->
+        <div class="language-selector-wrapper">
+            <label for="cambiador-idioma" data-i18n="lang_label">Language:</label>
+            <select id="cambiador-idioma">
+                <option value="en" data-i18n="lang_en">English (US)</option>
+                <option value="es" data-i18n="lang_es">Español</option>
+                <option value="pt" data-i18n="lang_pt">Português</option>
+                <option value="fr" data-i18n="lang_fr">Français</option>
+                <option value="de" data-i18n="lang_de">Deutsch</option>
+                <option value="ko" data-i18n="lang_ko">한국어</option>
+                <option value="zh" data-i18n="lang_zh">中文</option>
+                <option value="ja" data-i18n="lang_ja">日本語</option>
+                <option value="it" data-i18n="lang_it">Italiano</option>
+                <option value="hi" data-i18n="lang_hi">हिन्दी</option>
+                <option value="ar" data-i18n="lang_ar">العربية</option>
+                <option value="tr" data-i18n="lang_tr">Türkçe</option>
+                <option value="ru" data-i18n="lang_ru">Русский</option>
+                <option value="sv" data-i18n="lang_sv">Svenska</option>
+                <option value="nl" data-i18n="lang_nl">Nederlands</option>
+            </select>
+        </div>
+
+        <!-- Encabezado con Logotipo Oficial y Eslogan -->
+        <header class="brand-header">
+            <div class="logo-container">
+                <img src="assets/img/logo-icon.png" alt="BENEATH Logo" class="brand-logo-img">
+            </div>
+            <h1 class="brand-title">BENEATH</h1>
+            <p class="brand-tagline" data-i18n="tagline">KEEP YOUR PRIVATE CHATS PRIVATE</p>
+        </header>
+
+        <!-- Contenedor Principal de la Interfaz -->
+        <div class="main-workspace">
+
+            <!-- Módulo Izquierdo: Video Institucional con Selector de Idioma de Video Dinámico -->
+            <div class="video-preview-module">
+                <div class="video-header-title" id="video-header-badge" data-i18n="video_header_badge">SEARCH YOUR LANGUAGE IN THE VIDEO MENU</div>
+                
+                <!-- Enlace dinámico del video -->
+                <a href="https://www.youtube.com/watch?v=VToSuq-MXcA" target="_blank" class="video-card-link" id="video-link-container">
+                    <div class="video-thumbnail-box">
+                        <div class="play-glow-btn">▶</div>
+                        <span class="video-label" data-i18n="video_preview_title">WATCH PRESENTATION</span>
+                    </div>
+                </a>
+                
+                <!-- Selector interno rápido para cambiar el idioma del video en la misma pantalla -->
+                <div class="video-lang-selector-box">
+                    <select id="video-lang-selector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="pt">Português</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="it">Italiano</option>
+                        <option value="ja">日本語</option>
+                        <option value="zh">中文</option>
+                        <option value="ko">한국어</option>
+                        <option value="ar">العربية</option>
+                        <option value="tr">Türkçe</option>
+                        <option value="ru">Русский</option>
+                    </select>
+                </div>
+
+                <!-- Guía clara para el usuario -->
+                <p class="video-lang-instruction" data-i18n="video_lang_help">Click on the video and visit our YouTube channel to watch our presentation with the audio dubbed into your language.</p>
+
+                <!-- Texto de Cumplimiento Internacional debajo del Video -->
+                <div class="compliance-highlight-box">
+                    <p class="compliance-text-large" data-i18n="footer_compliance">
+                        Architecture designed in accordance with international compliance standards: GDPR (EU) • COPPA (USA) • UN (General Comment No. 25 — Children's Rights)
+                    </p>
+                </div>
+            </div>
+
+            <!-- Panel Central de Cristal (The Vault UI) -->
+            <main class="vault-panel">
+                <div class="menu-grid">
+                    <button class="vault-btn" onclick="navigateTo('home')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L4 9v12h16V9l-8-6zm6 16h-3v-5H9v5H6v-9.5l6-4.5 6 4.5V19z"/></svg>
+                        <span class="btn-text" data-i18n="btn_home">HOME</span>
+                    </button>
+                    <button class="vault-btn" onclick="navigateTo('privacy')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        <span class="btn-text" data-i18n="btn_privacy">DATA & PRIVACY PROTECTION</span>
+                    </button>
+                    <button class="vault-btn" onclick="navigateTo('compliance')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        <span class="btn-text" data-i18n="btn_compliance">GLOBAL COMPLIANCE STANDARDS</span>
+                    </button>
+                    <button class="vault-btn" onclick="navigateTo('pricing')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                        <span class="btn-text" data-i18n="btn_pricing">PRICING & INSTITUTIONAL TIERS</span>
+                    </button>
+                    <button class="vault-btn" onclick="navigateTo('faq')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16h-2v-2h2v2zm1.07-7.75l-.9.92C13.45 11.9 13 12.5 13 14h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.03-.42 1.98-1.07 2.75z"/></svg>
+                        <span class="btn-text" data-i18n="btn_faq">FAQ</span>
+                    </button>
+                    <button class="vault-btn" onclick="navigateTo('support')">
+                        <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                        <span class="btn-text" data-i18n="btn_support">EXECUTIVE SUPPORT & CONTACT</span>
+                    </button>
+                </div>
+
+                <button class="cta-secure-mode" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
+            </main>
+
+            <!-- Módulo Derecho: Mockup Telefónico -->
+            <div class="phone-mockup-container">
+                <img src="assets/img/phone-mockup.png" alt="Secure Interface Preview">
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="bunker-footer">
+            <div class="footer-bottom">
+                <span data-i18n="footer_copyright">© 2026 BENEATH Technologies. Certified Secure. ISO 27001 | GDPR Compliant.</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="lang.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
