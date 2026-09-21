@@ -87,9 +87,13 @@ function navigateTo(section) {
         if (aboutView) aboutView.style.display = 'none';
         if (complianceView) complianceView.style.display = 'none';
         if (menuGrid) menuGrid.style.display = 'grid';
-    } else if (institutionalRoutes[section]) {
-        console.log(`Cargando protocolo: ${institutionalRoutes[section]}`);
-        alert(`Cargando sección: ${institutionalRoutes[section]}`);
+    } else {
+        // Para cualquier otra sección
+        if (menuGrid) menuGrid.style.display = 'grid';
+    }
+
+    if (typeof updateLanguageTranslations === 'function') {
+        updateLanguageTranslations();
     }
 }
 
