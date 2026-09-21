@@ -62,18 +62,30 @@ function navigateTo(section) {
 
     const menuGrid = document.querySelector('.menu-grid');
     const aboutView = document.getElementById('about-us-view');
+    const complianceView = document.getElementById('compliance-view');
 
     if (section === 'privacy') {
         // Oculta la cuadrícula de botones y muestra el panel de About Us
         if (menuGrid) menuGrid.style.display = 'none';
         if (aboutView) aboutView.style.display = 'block';
+        if (complianceView) complianceView.style.display = 'none';
+        
+        if (typeof updateLanguageTranslations === 'function') {
+            updateLanguageTranslations();
+        }
+    } else if (section === 'compliance') {
+        // Oculta la cuadrícula de botones y muestra el panel de Compliance
+        if (menuGrid) menuGrid.style.display = 'none';
+        if (aboutView) aboutView.style.display = 'none';
+        if (complianceView) complianceView.style.display = 'block';
         
         if (typeof updateLanguageTranslations === 'function') {
             updateLanguageTranslations();
         }
     } else if (section === 'home') {
-        // Oculta el panel de About Us y regresa la cuadrícula de botones
+        // Oculta los paneles y regresa la cuadrícula de botones
         if (aboutView) aboutView.style.display = 'none';
+        if (complianceView) complianceView.style.display = 'none';
         if (menuGrid) menuGrid.style.display = 'grid';
     } else if (institutionalRoutes[section]) {
         console.log(`Cargando protocolo: ${institutionalRoutes[section]}`);
