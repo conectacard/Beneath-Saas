@@ -87,6 +87,7 @@
 
             <!-- Panel Central de Cristal (The Vault UI) -->
             <main class="vault-panel">
+                <!-- Cuadrícula de botones principales -->
                 <div class="menu-grid">
                     <button class="vault-btn" onclick="navigateTo('home')">
                         <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L4 9v12h16V9l-8-6zm6 16h-3v-5H9v5H6v-9.5l6-4.5 6 4.5V19z"/></svg>
@@ -94,7 +95,7 @@
                     </button>
                     <button class="vault-btn" onclick="navigateTo('privacy')">
                         <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                        <span class="btn-text" data-i18n="btn_privacy">DATA & PRIVACY PROTECTION</span>
+                        <span class="btn-text" data-i18n="btn_privacy">ABOUT US</span>
                     </button>
                     <button class="vault-btn" onclick="navigateTo('compliance')">
                         <svg class="vault-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
@@ -114,7 +115,31 @@
                     </button>
                 </div>
 
-                <button class="cta-secure-mode" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
+                <!-- Panel de About Us (Oculto por defecto dentro del mismo panel de cristal) -->
+                <div id="about-us-view" style="display: none; padding: 10px; color: #fff;">
+                    <h2 style="color: #fff; margin-bottom: 12px; font-size: 1.3rem;" data-i18n="about_main_title">What is BENEATH?</h2>
+                    <p style="color: #c5d1e0; line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem;" data-i18n="about_main_desc">
+                        A cybersecurity tool for private communication without sharing your phone number, email address, or personal data. It is not an entertainment messaging service.
+                    </p>
+
+                    <h3 style="color: #fff; margin-bottom: 8px; font-size: 1.1rem;" data-i18n="about_transmit_title">Transmit, don’t store (48 / 72 hours)</h3>
+                    <p style="color: #c5d1e0; line-height: 1.6; margin-bottom: 15px; font-size: 0.95rem;" data-i18n="about_transmit_desc">
+                        Messages and files are purged from infrastructure once delivered. Files expire after 48 to 72 hours. Download them before they are gone.
+                    </p>
+
+                    <h3 style="color: #fff; margin-bottom: 8px; font-size: 1.1rem;" data-i18n="about_ideal_title">Ideal for:</h3>
+                    <ul style="color: #c5d1e0; line-height: 1.6; margin-bottom: 20px; padding-left: 20px; font-size: 0.95rem;">
+                        <li style="margin-bottom: 6px;" data-i18n="about_item_sports"><strong>Sports Clubs:</strong> Direct and secure messaging.</li>
+                        <li style="margin-bottom: 6px;" data-i18n="about_item_schools"><strong>Schools:</strong> Communication between teachers and parents without exposing personal numbers.</li>
+                        <li data-i18n="about_item_companies"><strong>Companies & Professional Services:</strong> Confidential exchange of documents and data with clients, suppliers, or candidates without exposing personal contact details.</li>
+                    </ul>
+
+                    <button class="vault-btn" onclick="navigateTo('home')" style="width: auto; padding: 10px 20px;">
+                        <span data-i18n="btn_home">BACK TO HOME</span>
+                    </button>
+                </div>
+
+                <button class="cta-secure-mode" onclick="navigateTo('secure')" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
             </main>
 
             <!-- Módulo Derecho: Mockup Telefónico -->

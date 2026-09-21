@@ -5,32 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     console.log("BENEATH Institutional Security Interface: Sistema inicializado correctamente.");
-});
-
-/**
- * Controla la navegación modular del panel central de cristal
- * @param {string} section - Identificador de la sección institucional seleccionada
- */
-function navigateTo(section) {
-    console.log(`Navegando a la sección institucional: ${section}`);
-    
-    // Diccionario de rutas institucionales para futura expansión de vistas
-    const institutionalRoutes = {
-        'home': 'Vista general del búnker',
-        'privacy': 'Protección de datos y privacidad',
-        'compliance': 'Estándares de cumplimiento global (GDPR, COPPA, ONU)',
-        'pricing': 'Esquemas de precios y niveles institucionales',
-        'faq': 'Preguntas frecuentes para directivos',
-        'support': 'Soporte ejecutivo y contacto directo'
-    };
-
-    if (institutionalRoutes[section]) {
-        // Espacio reservado para renderizar dinámicamente el contenido en pantalla
-        console.log(`Cargando protocolo: ${institutionalRoutes[section]}`);
-    }
-}
-document.addEventListener("DOMContentLoaded", function() {
-    console.log("BENEATH Institutional Security Interface: Sistema inicializado correctamente.");
 
     // Banco de enlaces oficiales de YouTube para cada versión de idioma del video
     const videoLinks = {
@@ -62,35 +36,58 @@ document.addEventListener("DOMContentLoaded", function() {
                 const langName = e.target.options[e.target.selectedIndex].text.split(' ')[0].toUpperCase();
                 videoHeaderBadge.innerText = `COMPANY OVERVIEW - ${langName} VIDEO`;
                 
-                console.link(`Cambiando video institucional a idioma: ${selectedLang}`);
+                console.log(`Cambiando video institucional a idioma: ${selectedLang}`);
             }
         });
     }
 });
 
+/**
+ * Controla la navegación modular del panel central de cristal
+ * @param {string} section - Identificador de la sección institucional seleccionada
+ */
 function navigateTo(section) {
     console.log(`Navegando a la sección institucional: ${section}`);
     
+    // Diccionario de rutas institucionales
     const institutionalRoutes = {
         'home': 'Vista general del búnker',
         'privacy': 'Protección de datos y privacidad',
         'compliance': 'Estándares de cumplimiento global (GDPR, COPPA, ONU)',
         'pricing': 'Esquemas de precios y niveles institucionales',
         'faq': 'Preguntas frecuentes para directivos',
-        'support': 'Soporte ejecutivo y contacto directo'
+        'support': 'Soporte ejecutivo y contacto directo',
+        'secure': 'Modo seguro activado'
     };
 
-    if (institutionalRoutes[section]) {
+    const menuGrid = document.querySelector('.menu-grid');
+    const aboutView = document.getElementById('about-us-view');
+
+    if (section === 'privacy') {
+        // Oculta la cuadrícula de botones y muestra el panel de About Us
+        if (menuGrid) menuGrid.style.display = 'none';
+        if (aboutView) aboutView.style.display = 'block';
+        
+        if (typeof updateLanguageTranslations === 'function') {
+            updateLanguageTranslations();
+        }
+    } else if (section === 'home') {
+        // Oculta el panel de About Us y regresa la cuadrícula de botones
+        if (aboutView) aboutView.style.display = 'none';
+        if (menuGrid) menuGrid.style.display = 'grid';
+    } else if (institutionalRoutes[section]) {
         console.log(`Cargando protocolo: ${institutionalRoutes[section]}`);
+        alert(`Cargando sección: ${institutionalRoutes[section]}`);
     }
 }
+
 // --- CONTROLADOR DEL MODAL DE VIDEO FLOTANTE ---
 document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById('videoModal');
     const iframe = document.getElementById('youtubeIframe');
     const closeBtn = document.getElementById('closeVideoModal');
 
-    // Función auxiliar para extraer el ID del video de YouTube (maneja youtu.be y youtube.com)
+    // Función auxiliar para extraer el ID del video de YouTube
     function getYouTubeId(url) {
         const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
         const match = url.match(regExp);
@@ -104,24 +101,23 @@ document.addEventListener("DOMContentLoaded", () => {
             const videoId = getYouTubeId(href);
 
             if (videoId) {
-                e.preventDefault(); // Evita que abra YouTube en otra pestaña
+                e.preventDefault();
                 iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&cc_load_policy=0&hl=en&cc_lang_pref=none&iv_load_policy=3&modestbranding=1`;
                 modal.style.display = 'flex';
             }
         });
     });
 
-    // Función para cerrar el modal y apagar el video para que deje de sonar de fondo
+    // Función para cerrar el modal y apagar el video
     function closeModal() {
         modal.style.display = 'none';
-        iframe.src = ''; // Detiene la reproducción limpiando el src
+        iframe.src = '';
     }
 
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
     
-    // Cerrar también si hacen clic fuera del cuadro del video
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
@@ -130,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Cerrar con la tecla Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
             closeModal();
