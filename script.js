@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (videoId) {
                 e.preventDefault(); // Evita que abra YouTube en otra pestaña
-                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&cc_load_policy=0&hl=en&cc_lang_pref=none`;
+                iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&cc_load_policy=0&hl=en&cc_lang_pref=none&iv_load_policy=3&modestbranding=1`;
                 modal.style.display = 'flex';
             }
         });
