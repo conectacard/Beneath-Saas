@@ -64,12 +64,14 @@ function navigateTo(section) {
     const aboutView = document.getElementById('about-us-view');
     const complianceView = document.getElementById('compliance-view');
     const faqView = document.getElementById('faq-view');
+    const supportView = document.getElementById('support-view');
 
     // Oculta todos los paneles por defecto
     if (menuGrid) menuGrid.style.display = 'none';
     if (aboutView) aboutView.style.display = 'none';
     if (complianceView) complianceView.style.display = 'none';
     if (faqView) faqView.style.display = 'none';
+    if (supportView) supportView.style.display = 'none';
 
     if (section === 'privacy') {
         if (aboutView) aboutView.style.display = 'block';
@@ -77,6 +79,8 @@ function navigateTo(section) {
         if (complianceView) complianceView.style.display = 'block';
     } else if (section === 'faq') {
         if (faqView) faqView.style.display = 'block';
+    } else if (section === 'support') {
+        if (supportView) supportView.style.display = 'block';
     } else if (section === 'home') {
         if (menuGrid) menuGrid.style.display = 'grid';
         // Detiene el video incrustado del FAQ al volver al HOME
@@ -185,3 +189,52 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+// --- CONTROLADOR DEL FORMULARIO DE SOPORTE PERSONAL ---
+async function submitSupportForm() {
+    const nameInput = document.getElementById('support-user-name');
+    const msgInput = document.getElementById('support-user-msg');
+    const successAlert = document.getElementById('support-success-alert');
+
+    if (!nameInput || !msgInput) return;
+
+    if (msgInput.value.trim() === '') {
+        alert('Por favor escribe un mensaje antes de enviar.');
+        return;
+    }
+
+    const formData = {
+        apikey: "a56ac434-2039-4a81-a413-01f92ff5d54b",
+        subject: `Nuevo mensaje de soporte BENEATH de: ${nameInput.value.trim() || 'Anónimo'}`,
+        name: nameInput.value.trim() || 'Anónimo',
+        message: msgInput.value.trim()
+    };
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        if (result.success) {
+            if (successAlert) {
+                successAlert.style.display = 'block';
+                setTimeout(() => {
+                    successAlert.style.display = 'none';
+                }, 5000);
+            }
+            nameInput.value = '';
+            msgInput.value = '';
+            console.log("Mensaje enviado de forma real al correo electrónico.");
+        } else {
+            alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
+        }
+    } catch (error) {
+        console.error("Error de red:", error);
+        alert("Error de conexión con el servidor de mensajería.");
+    }
+}

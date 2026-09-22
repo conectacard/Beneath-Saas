@@ -233,6 +233,34 @@
                     </button>
                 </div>
 
+                <!-- Panel de Personal Support (Atención Personalizada) -->
+                <div id="support-view" style="display: none; padding: 10px; color: #fff; max-height: 420px; overflow-y: auto;">
+                    <h2 style="color: #fff; margin-bottom: 10px; font-size: 1.2rem;" data-i18n="support_main_title">Personal Support & Direct Inquiries</h2>
+                    <p style="color: #c5d1e0; line-height: 1.4; margin-bottom: 15px; font-size: 0.85rem;" data-i18n="support_main_desc">
+                    Send us your personal inquiry. Our system will log your request and provide an immediate confirmation of receipt in your selected language. For your complete security, total anonymity is guaranteed—you are not required to use your real name.
+                    </p>
+    
+                   <div style="margin-bottom: 12px;">
+                     <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 4px;" data-i18n="support_label_name">Your Name / Identifier:</label>
+                     <input type="text" id="support-user-name" placeholder="Anonymous / Alias" style="width: 100%; padding: 8px; background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; color: #fff; border-radius: 4px; font-size: 0.85rem;">
+                   </div>
+
+                   <div style="margin-bottom: 15px;">
+                     <label style="display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 4px;" data-i18n="support_label_msg">Your Personal Message or Inquiry:</label>
+                    <textarea id="support-user-msg" rows="3" placeholder="Type your inquiry here..." style="width: 100%; padding: 8px; background: rgba(15, 23, 42, 0.6); border: 1px solid #334155; color: #fff; border-radius: 4px; font-size: 0.85rem; resize: none;"></textarea>
+                   </div>
+
+                   <button onclick="submitSupportForm()" style="background: #2563eb; color: #fff; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; width: 100%; margin-bottom: 12px;" data-i18n="support_btn_send">SEND ENQUIRY</button>
+
+                   <div id="support-success-alert" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; color: #34d399; padding: 10px; border-radius: 4px; font-size: 0.8rem; text-align: center;" data-i18n="support_success_msg">
+                     Inquiry received successfully. We will review your case and respond shortly in your selected language.
+                   </div>
+
+                   <button class="vault-btn" onclick="navigateTo('home')" style="width: auto; padding: 8px 16px; margin-top: 10px;">
+                       <span data-i18n="btn_home">BACK TO HOME</span>
+                   </button>
+                </div>
+
                 <button class="cta-secure-mode" onclick="navigateTo('secure')" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
             </main>
 
