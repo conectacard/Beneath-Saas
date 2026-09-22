@@ -84,6 +84,7 @@ const DICTIONARY = {
         faq_q6: "6. File expiration: Automatically expire and delete between 48 and 72 hours for security.",
         faq_q7: "7. Expired files: Must be downloaded locally before the 48/72 hour deadline is met.",
         faq_q8: "8. Password recovery: Recovered using 4 unique keywords shown upon first registration.",
+        btn_support: "PERSONAL SUPPORT",
     },
     es: {
         lang_label: "Idioma:",
@@ -170,6 +171,7 @@ const DICTIONARY = {
         faq_q6: "6. Caducidad de archivos: Expiran y se borran automáticamente entre 48 y 72 horas por seguridad.",
         faq_q7: "7. Archivos vencidos: Deben descargarse localmente antes de que se cumpla el plazo de las 48/72 horas.",
         faq_q8: "8. Recuperación de contraseña: Se recupera mediante 4 palabras clave únicas que se muestran al registrarse por primera vez.",
+        btn_support: "SOPORTE PERSONAL",
     },
     pt: {
         lang_label: "Idioma:",
@@ -256,6 +258,7 @@ const DICTIONARY = {
         faq_q6: "6. Validade de arquivos: Expiram e são apagados automaticamente entre 48 e 72 horas por segurança.",
         faq_q7: "7. Arquivos vencidos: Devem ser baixados localmente antes que o prazo de 48/72 horas seja atingido.",
         faq_q8: "8. Recuperação de senha: Recuperada por meio de 4 palavras-chave exclusivas exibidas no primeiro cadastro.",
+        btn_support: "SUPORTE PESSOAL",
     },
     fr: {
         lang_label: "Langue :",
@@ -342,6 +345,7 @@ const DICTIONARY = {
         faq_q6: "6. Expiration des fichiers : Ils expirent et s'effacent automatiquement entre 48 et 72 heures pour des raisons de sécurité.",
         faq_q7: "7. Fichiers expirés : Doivent être téléchargés localement avant l'expiration du délai de 48/72 heures.",
         faq_q8: "8. Récupération de mot de passe : Récupéré à l'aide de 4 mots-clés uniques affichés lors de la première inscription.",
+        btn_support: "SUPPORT PERSONNEL",
     },
     de: {
         lang_label: "Sprache:",
@@ -428,6 +432,7 @@ const DICTIONARY = {
         faq_q6: "6. Datei-Ablauf: Laufen aus Sicherheitsgründen nach 48 bis 72 Stunden automatisch ab und werden gelöscht.",
         faq_q7: "7. Abgelaufene Dateien: Müssen vor Ablauf der 48/72-Stunden-Frist lokal heruntergeladen werden.",
         faq_q8: "8. Passwort-Wiederherstellung: Wiederherstellung über 4 eindeutige Schlüsselwörter bei der Erstregistrierung.",
+        btn_support: "PERSÖNLICHER SUPPORT",
     },
     ko: {
         lang_label: "언어:",
@@ -514,6 +519,7 @@ const DICTIONARY = {
         faq_q6: "6. 파일 만료: 보안을 위해 48~72시간 사이에 자동으로 만료되고 삭제됩니다.",
         faq_q7: "7. 만료된 파일: 48/72시간 기한이 도달하기 전에 로컬에 다운로드해야 합니다.",
         faq_q8: "8. 비밀번호 복구: 첫 등록 시 표시되는 4개의 고유한 키워드를 사용하여 복구합니다.",
+        btn_support: "개인 지원",
     },
     zh: {
         lang_label: "语言：",
@@ -682,6 +688,7 @@ const DICTIONARY = {
         faq_q6: "6. ファイルの有効期限：セキュリティのため48〜72時間で自動的に期限切れとなり削除されます。",
         faq_q7: "7. 期限切れファイル：48〜72時間の期限が切れる前に、ローカルにダウンロードする必要があります。",
         faq_q8: "8. パスワードの復元：初回登録時に表示される4つのユニークなキーワードを使用して復元します。",
+        btn_support: "个性化支持",
     },
     it: {
         lang_label: "Lingua:",
@@ -768,6 +775,7 @@ const DICTIONARY = {
         faq_q6: "6. Scadenza file: Scadono e si cancellano automaticamente tra 48 e 72 ore per sicurezza.",
         faq_q7: "7. File scaduti: Devono essere scaricati localmente prima dello scadere del termine di 48/72 ore.",
         faq_q8: "8. Recupero password: Recuperata tramite 4 parole chiave uniche mostrate alla prima registrazione.",
+        btn_support: "SUPPORTO PERSONALE",
     },
     hi: {
         lang_label: "भाषा:",
@@ -854,6 +862,7 @@ const DICTIONARY = {
         faq_q6: "6. फ़ाइल समाप्ति: सुरक्षा के लिए 48 से 72 घंटों के बीच स्वचालित रूप से समाप्त और विलोपित हो जाती है।",
         faq_q7: "7. समाप्त फ़ाइलें: 48/72 घंटे की समय सीमा पूरी होने से पहले स्थानीय रूप से डाउनलोड की जानी चाहिए।",
         faq_q8: "8. पासवर्ड पुनर्प्राप्ति: पहली पंजीकरण पर दिखाए गए 4 अद्वितीय कीवर्ड का उपयोग करके पुनर्प्राप्त किया जाता है।",
+        btn_support: "व्यक्तिगत सहायता",
     },
     ar: {
         lang_label: "اللغة:",
@@ -940,6 +949,7 @@ const DICTIONARY = {
         faq_q6: "6. انتهاء صلاحية الملفات: تنتهي صلاحيتها وتحذف تلقائياً بين 48 و 72 ساعة لأسباب تتعلق بالأمان.",
         faq_q7: "7. الملفات منتهية الصلاحية: يجب تنزيلها محلياً قبل الوصول إلى الموعد النهائي البالغ 48/72 ساعة.",
         faq_q8: "8. استعادة كلمة المرور: تتم استعادتها باستخدام 4 كلمات رئيسية فريدة تظهر عند التسجيل لأول مرة.",
+        btn_support: "دعم شخصي",
     },
     tr: {
         lang_label: "Dil:",
@@ -1026,6 +1036,7 @@ const DICTIONARY = {
         faq_q6: "6. Dosya geçerlilik süresi: Güvenlik nedeniyle 48 ila 72 saat içinde otomatik olarak sona erer ve silinir.",
         faq_q7: "7. Süresi dolan dosyalar: 48/72 saatlik süre dolmadan yerel olarak indirilmelidir.",
         faq_q8: "8. Şifre kurtarma: İlk kayıtta gösterilen 4 benzersiz anahtar kelime kullanılarak kurtarılır.",
+        btn_support: "KİŞİSEL DESTEK",
     },
     ru: {
         lang_label: "Язык:",
@@ -1112,6 +1123,7 @@ const DICTIONARY = {
         faq_q6: "6. Срок действия файлов: автоматически истекает и удаляется через 48–72 часа в целях безопасности.",
         faq_q7: "7. Просроченные файлы: должны быть загружены локально до истечения 48/72-часового срока.",
         faq_q8: "8. Восстановление пароля: восстанавливается с помощью 4 уникальных ключевых слов при первой регистрации.",
+        btn_support: "ПЕРСОНАЛЬНАЯ ПОДДЕРЖКА",
     },
     sv: {
         lang_label: "Språk:",
@@ -1198,6 +1210,7 @@ const DICTIONARY = {
         faq_q6: "6. Filers giltighetstid: Löper ut och raderas automatiskt efter 48 till 72 timmar av säkerhetsskäl.",
         faq_q7: "7. Utgångna filer: Måste laddas ner lokalt innan 48/72-timmarsfristen uppnås.",
         faq_q8: "8. Lösenordsåterställning: Återställs med hjälp av 4 unika nyckelord som visas vid den första registreringen.",
+        btn_support: "PERSONLIG SUPPORT",
     },
     nl: {
         lang_label: "Taal:",
@@ -1284,6 +1297,7 @@ const DICTIONARY = {
         faq_q6: "6. Vervaldatum van bestanden: Verloken en worden om veiligheidsredenen automatisch verwijderd tussen 48 en 72 uur.",
         faq_q7: "7. Verlopen bestanden: Moeten lokaal worden gedownload voordat de termijn van 48/72 uur is verstreken.",
         faq_q8: "8. Wachtwoordherstel: Hersteld met behulp van 4 unieke trefwoorden die bij de eerste registratie worden getoond.",
+        btn_support: "PERSOONLIJKE ONDERSTEUNING",
     }
 };
 
