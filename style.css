@@ -348,7 +348,13 @@ body, html {
         gap: 20px;
     }
     .video-preview-module, .phone-mockup-container {
-        display: none;
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    .phone-mockup-container {
+        transform: none;
     }
     body, html {
         overflow: auto;
