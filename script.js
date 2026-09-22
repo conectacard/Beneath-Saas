@@ -79,6 +79,11 @@ function navigateTo(section) {
         if (faqView) faqView.style.display = 'block';
     } else if (section === 'home') {
         if (menuGrid) menuGrid.style.display = 'grid';
+        // Detiene el video incrustado del FAQ al volver al HOME
+        const faqIframe = document.getElementById('faq-embedded-iframe');
+        if (faqIframe) {
+            faqIframe.src = '';
+        }
     } else {
         if (menuGrid) menuGrid.style.display = 'grid';
     }
