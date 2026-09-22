@@ -227,7 +227,7 @@ async function submitSupportForm() {
                     successAlert.style.display = 'none';
                 }, 5000);
             }
-            nameInput.value = '';
+            emailInput.value = '';
             msgInput.value = '';
             console.log("Mensaje enviado de forma real al correo electrónico.");
         } else {
