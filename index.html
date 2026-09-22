@@ -169,6 +169,70 @@
                     </button>
                 </div>
 
+                <!-- Panel de FAQ (Preguntas Frecuentes con Video Embebido e Idiomas) -->
+                <div id="faq-view" style="display: none; padding: 10px; color: #fff; max-height: 420px; overflow-y: auto;">
+                    <h2 style="color: #fff; margin-bottom: 10px; font-size: 1.2rem;" data-i18n="faq_main_title">Frequently Asked Questions & Tutorial</h2>
+                    <p style="color: #c5d1e0; line-height: 1.4; margin-bottom: 12px; font-size: 0.85rem;" data-i18n="faq_main_desc">
+                        Explore our quick guide and embedded video tutorial without leaving the platform.
+                    </p>
+
+                    <!-- Reproductor de Video Integrado (Iframe) con Selector de Idiomas -->
+                    <div class="embedded-tutorial-box" style="background: rgba(15, 28, 48, 0.8); border: 1px solid rgba(0, 243, 255, 0.3); border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <span style="font-size: 9px; color: #00f3ff; font-weight: 700; text-transform: uppercase;" data-i18n="faq_video_label">INSTALLATION & USE TUTORIAL</span>
+                            <select id="faq-video-lang-selector" style="background: #03070d; color: #00f3ff; border: 1px solid rgba(0, 243, 255, 0.4); padding: 3px 6px; border-radius: 6px; font-size: 9px; font-weight: 700; outline: none; cursor: pointer;">
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="pt">Português</option>
+                                <option value="fr">Français</option>
+                                <option value="de">Deutsch</option>
+                                <option value="it">Italiano</option>
+                                <option value="ja">日本語</option>
+                                <option value="zh">中文</option>
+                                <option value="ko">한국어</option>
+                                <option value="ar">العربية</option>
+                                <option value="tr">Türkçe</option>
+                                <option value="ru">Русский</option>
+                            </select>
+                        </div>
+                        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px;">
+                            <iframe id="faq-embedded-iframe" src="https://www.youtube.com/embed/FWzv4t-TkB8" title="BENEATH Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Listado de las 8 Preguntas Rápidas -->
+                    <ul style="list-style: none; padding: 0; margin-bottom: 15px; font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q1">
+                            <strong>1. Installation/Registration:</strong> No installation or invasive registries required (just open the link).
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q2">
+                            <strong>2. What can be sent:</strong> Documents, images, and messages (heavy videos go via external link).
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q3">
+                            <strong>3. Member limit:</strong> Packages available from 15 up to 40 members per group.
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q4">
+                            <strong>4. Contracting:</strong> Annual service with digital electronic signature prior to payment.
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q5">
+                            <strong>5. Current promotion:</strong> 20% direct discount + 25% school rebate (pay only 55%).
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q6">
+                            <strong>6. File expiration:</strong> Automatically expire and delete between 48 and 72 hours for security.
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q7">
+                            <strong>7. Expired files:</strong> Must be downloaded locally before the 48/72 hour deadline is met.
+                        </li>
+                        <li style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff;" data-i18n="faq_q8">
+                            <strong>8. Password recovery:</strong> Recovered using 4 unique keywords shown upon first registration.
+                        </li>
+                    </ul>
+
+                    <button class="vault-btn" onclick="navigateTo('home')" style="width: auto; padding: 8px 16px;">
+                        <span data-i18n="btn_home">BACK TO HOME</span>
+                    </button>
+                </div>
+
                 <button class="cta-secure-mode" onclick="navigateTo('secure')" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
             </main>
 

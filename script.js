@@ -63,32 +63,23 @@ function navigateTo(section) {
     const menuGrid = document.querySelector('.menu-grid');
     const aboutView = document.getElementById('about-us-view');
     const complianceView = document.getElementById('compliance-view');
+    const faqView = document.getElementById('faq-view');
+
+    // Oculta todos los paneles por defecto
+    if (menuGrid) menuGrid.style.display = 'none';
+    if (aboutView) aboutView.style.display = 'none';
+    if (complianceView) complianceView.style.display = 'none';
+    if (faqView) faqView.style.display = 'none';
 
     if (section === 'privacy') {
-        // Oculta la cuadrícula de botones y muestra el panel de About Us
-        if (menuGrid) menuGrid.style.display = 'none';
         if (aboutView) aboutView.style.display = 'block';
-        if (complianceView) complianceView.style.display = 'none';
-        
-        if (typeof updateLanguageTranslations === 'function') {
-            updateLanguageTranslations();
-        }
     } else if (section === 'compliance') {
-        // Oculta la cuadrícula de botones y muestra el panel de Compliance
-        if (menuGrid) menuGrid.style.display = 'none';
-        if (aboutView) aboutView.style.display = 'none';
         if (complianceView) complianceView.style.display = 'block';
-        
-        if (typeof updateLanguageTranslations === 'function') {
-            updateLanguageTranslations();
-        }
+    } else if (section === 'faq') {
+        if (faqView) faqView.style.display = 'block';
     } else if (section === 'home') {
-        // Oculta los paneles y regresa la cuadrícula de botones
-        if (aboutView) aboutView.style.display = 'none';
-        if (complianceView) complianceView.style.display = 'none';
         if (menuGrid) menuGrid.style.display = 'grid';
     } else {
-        // Para cualquier otra sección
         if (menuGrid) menuGrid.style.display = 'grid';
     }
 
@@ -96,6 +87,47 @@ function navigateTo(section) {
         updateLanguageTranslations();
     }
 }
+
+// --- BANCO DE ENLACES Y SELECTOR DE IDIOMAS PARA EL VIDEO EMBEBIDO DE FAQ ---
+document.addEventListener("DOMContentLoaded", function() {
+    const videoLinks = {
+        'en': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'es': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'pt': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'fr': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'de': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'it': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'ja': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'zh': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'ko': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'ar': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'tr': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
+        'ru': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s'
+    };
+
+    const faqSelector = document.getElementById('faq-video-lang-selector');
+    const faqIframe = document.getElementById('faq-embedded-iframe');
+
+    function getYouTubeId(url) {
+        const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        const match = url.match(regExp);
+        return (match && match[2].length === 11) ? match[2] : null;
+    }
+
+    if (faqSelector && faqIframe) {
+        faqSelector.addEventListener('change', function(e) {
+            const lang = e.target.value;
+            const targetUrl = videoLinks[lang];
+            if (targetUrl) {
+                const vidId = getYouTubeId(targetUrl);
+                if (vidId) {
+                    faqIframe.src = `https://www.youtube.com/embed/${vidId}?autoplay=1`;
+                    console.log(`Video incrustado cambiado a idioma: ${lang}`);
+                }
+            }
+        });
+    }
+});
 
 // --- CONTROLADOR DEL MODAL DE VIDEO FLOTANTE ---
 document.addEventListener("DOMContentLoaded", () => {

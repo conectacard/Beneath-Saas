@@ -453,3 +453,22 @@ body, html {
 .video-modal-close:hover {
     color: #00f3ff;
 }
+
+/* --- ESTILOS ADICIONALES PARA EL PANEL DE FAQ --- */
+#faq-view::-webkit-scrollbar {
+    width: 5px;
+}
+
+#faq-view::-webkit-scrollbar-track {
+    background: rgba(3, 7, 13, 0.5);
+    border-radius: 4px;
+}
+
+#faq-view::-webkit-scrollbar-thumb {
+    background: rgba(0, 243, 255, 0.4);
+    border-radius: 4px;
+}
+
+#faq-view::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 243, 255, 0.8);
+}
