@@ -191,11 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // --- CONTROLADOR DEL FORMULARIO DE SOPORTE PERSONAL ---
 async function submitSupportForm() {
-    const nameInput = document.getElementById('support-user-name');
+    const emailInput = document.getElementById('support-user-email');
     const msgInput = document.getElementById('support-user-msg');
     const successAlert = document.getElementById('support-success-alert');
 
-    if (!nameInput || !msgInput) return;
+    if (!emailInput || !msgInput) return;
 
     if (msgInput.value.trim() === '') {
         alert('Por favor escribe un mensaje antes de enviar.');
@@ -204,8 +204,8 @@ async function submitSupportForm() {
 
     const formData = {
         apikey: "a56ac434-2039-4a81-a413-01f92ff5d54b",
-        subject: `Nuevo mensaje de soporte BENEATH de: ${nameInput.value.trim() || 'Anónimo'}`,
-        name: nameInput.value.trim() || 'Anónimo',
+        subject: `Nuevo mensaje de soporte BENEATH de: ${emailInput.value.trim() || 'Anónimo'}`,
+        email: emailInput.value.trim(),
         message: msgInput.value.trim()
     };
 
