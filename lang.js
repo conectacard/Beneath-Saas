@@ -91,6 +91,7 @@ const DICTIONARY = {
     support_label_msg: "Your Personal Message or Inquiry:",
     support_btn_send: "SEND ENQUIRY",
     support_success_msg: "Inquiry received successfully. We will review your case and respond shortly in your selected language.",
+    support_label_email: "Your Email (to reply back):",
     },
     es: {
         lang_label: "Idioma:",
@@ -184,6 +185,7 @@ const DICTIONARY = {
     support_label_msg: "Tu Mensaje o Consulta Personal:",
     support_btn_send: "ENVIAR CONSULTA",
     support_success_msg: "Consulta recibida con éxito. Revisaremos tu caso y responderemos en breve en el idioma seleccionado.",
+    support_label_email: "Tu Correo Electrónico (para poder responderte):",
     },
     pt: {
         lang_label: "Idioma:",
@@ -277,6 +279,7 @@ const DICTIONARY = {
     support_label_msg: "Sua Mensagem ou Consulta Pessoal:",
     support_btn_send: "ENVIAR CONSULTA",
     support_success_msg: "Consulta recebida com sucesso. Analisaremos seu caso e responderemos em breve no idioma selecionado.",
+    support_label_email: "Seu E-mail (para contato de resposta):",
     },
     fr: {
         lang_label: "Langue :",
@@ -370,6 +373,7 @@ const DICTIONARY = {
     support_label_msg: "Votre Message ou Demande Personnelle :",
     support_btn_send: "ENVOYER LA DEMANDE",
     support_success_msg: "Demande reçue avec succès. Nous examinerons votre cas et y répondrons brièvement dans la langue sélectionnée.",
+    support_label_email: "Votre E-mail (pour vous répondre) :",
     },
     de: {
         lang_label: "Sprache:",
@@ -463,6 +467,7 @@ const DICTIONARY = {
     support_label_msg: "Ihre persönliche Nachricht oder Anfrage:",
     support_btn_send: "ANFRAGE SENDEN",
     support_success_msg: "Anfrage erfolgreich empfangen. Wir werden Ihren Fall prüfen und in Kürze in Ihrer gewählten Sprache antworten.",
+    support_label_email: "Ihre E-Mail (für Rückantworten):",
     },
     ko: {
         lang_label: "언어:",
@@ -556,6 +561,7 @@ const DICTIONARY = {
     support_label_msg: "개인 메시지 또는 문의 내용:",
     support_btn_send: "문의 보내기",
     support_success_msg: "문의가 성공적으로 접수되었습니다. 내용을 검토한 후 선택하신 언어로 곧 답변해 드리겠습니다.",
+    support_label_email: "이메일 주소 (답변 수신용):",
     },
     zh: {
         lang_label: "语言：",
@@ -644,6 +650,7 @@ const DICTIONARY = {
     support_label_msg: "您的个人留言或咨询：",
     support_btn_send: "发送咨询",
     support_success_msg: "咨询已成功收到。我们将审核您的案例，并很快以您所选的语言回复您。",
+    support_label_email: "您的电子邮箱（以便回复）：",
     },
     ja: {
         lang_label: "言語:",
@@ -737,6 +744,7 @@ const DICTIONARY = {
     support_label_msg: "プライベートなメッセージまたはお問い合わせ内容：",
     support_btn_send: "問い合わせを送信",
     support_success_msg: "お問い合わせが正常に送信されました。内容を確認の上、選択された言語でまもなくご返信いたします。",
+    support_label_email: "メールアドレス (返信用):",
     },
     it: {
         lang_label: "Lingua:",
@@ -830,6 +838,7 @@ const DICTIONARY = {
     support_label_msg: "Il tuo Messaggio o Richiesta Personale:",
     support_btn_send: "INVIA RICHIESTA",
     support_success_msg: "Richiesta ricevuta con successo. Esamineremo il tuo caso e risponderemo a breve nella lingua selezionata.",
+    support_label_email: "La tua Email (per ricevere risposta):",
     },
     hi: {
         lang_label: "भाषा:",
@@ -923,6 +932,7 @@ const DICTIONARY = {
     support_label_msg: "आपका व्यक्तिगत संदेश या पूछताछ:",
     support_btn_send: "पूछताछ भेजें",
     support_success_msg: "पूछताछ सफलतापूर्वक प्राप्त हो गई। हम आपके मामले की समीक्षा करेंगे और आपकी चुनी हुई भाषा में शीघ्र ही उत्तर देंगे।",
+    support_label_email: "आपका ईमेल (उत्तर पाने के लिए):",
     },
     ar: {
         lang_label: "اللغة:",
@@ -1016,6 +1026,7 @@ const DICTIONARY = {
     support_label_msg: "رسالتك الشخصية أو استفسارك:",
     support_btn_send: "إرسال الاستفسار",
     support_success_msg: "تم استلام الاستفسار بنجاح. سنراجع حالتك ونرد عليك قريباً باللغة التي اخترتها.",
+    support_label_email: "بريدك الإلكتروني (للرد عليك):",
     },
     tr: {
         lang_label: "Dil:",
@@ -1109,6 +1120,7 @@ const DICTIONARY = {
     support_label_msg: "Kişisel Mesajınız veya Sorunuz:",
     support_btn_send: "SORGUNU GÖNDER",
     support_success_msg: "Sorgu başarıyla alındı. Durumunuzu inceleyip seçtiğiniz dilde kısa süre içinde yanıt vereceğiz.",
+    support_label_email: "E-Posta Adresiniz (size dönüş yapabilmemiz için):",
     },
     ru: {
         lang_label: "Язык:",
@@ -1202,6 +1214,7 @@ const DICTIONARY = {
     support_label_msg: "Ваше личное сообщение или запрос:",
     support_btn_send: "ОТПРАВИТЬ ЗАПРОС",
     support_success_msg: "Запрос успешно получен. Мы рассмотрим ваш случай и ответим в ближайшее время на выбранном вами языке.",
+    support_label_email: "Ваш адрес электронной почты (для ответа):",
     },
     sv: {
         lang_label: "Språk:",
@@ -1295,6 +1308,7 @@ const DICTIONARY = {
     support_label_msg: "Ditt Personliga Meddelande eller Förfrågan:",
     support_btn_send: "SKICKA FÖRFRÅGAN",
     support_success_msg: "Förfrågan har mottagits framgångsrikt. Vi kommer att granska ditt ärende och svara inom kort på ditt valda språk.",
+    support_label_email: "Din e-postadress (för att kunna svara):",
     },
     nl: {
         lang_label: "Taal:",
@@ -1388,6 +1402,7 @@ const DICTIONARY = {
     support_label_msg: "Uw Persoonlijke Bericht of Vraag:",
     support_btn_send: "VERZOEK VERZENDEN",
     support_success_msg: "Vraag succesvol ontvangen. Wij zullen uw zaak bekijken and spoedig reageren in de door u gekozen taal.",
+    support_label_email: "Uw e-mailadres (om te kunnen antwoorden):",
     }
 };
 
