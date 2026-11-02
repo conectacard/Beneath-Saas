@@ -261,6 +261,50 @@
                    </button>
                 </div>
 
+                <!-- Panel de Pricing & Institutional Tiers -->
+                <div id="pricing-view" style="display: none; padding: 10px; color: #fff; max-height: 420px; overflow-y: auto;">
+                    <h2 style="color: #fff; margin-bottom: 10px; font-size: 1.2rem;" data-i18n="pricing_main_title">Annual Price per Student & Institutional Tiers</h2>
+                    <p style="color: #c5d1e0; line-height: 1.4; margin-bottom: 12px; font-size: 0.85rem;" data-i18n="pricing_main_desc">
+                        Global reference tiers designed for schools. Secure annual model per student featuring a built-in institutional margin for your school. Zero personal data required.
+                    </p>
+
+                    <!-- Bloque 1: Tarifas de Referencia Global (Autoridad Internacional) -->
+                    <div style="background: rgba(15, 28, 48, 0.8); border: 1px solid rgba(0, 243, 255, 0.3); border-radius: 8px; padding: 10px; margin-bottom: 10px;">
+                        <span style="font-size: 8px; color: #00f3ff; font-weight: 700; text-transform: uppercase;" data-i18n="pricing_global_badge">GLOBAL REFERENCE TIERS (ANNUAL)</span>
+                        <ul style="list-style: none; padding: 0; margin: 8px 0 0 0; font-size: 0.8rem; color: #c5d1e0; display: flex; flex-direction: column; gap: 4px;">
+                            <li>🇪🇺 <strong>Europe / UE:</strong> €9.90 EUR / student / yr</li>
+                            <li>🇺🇸🇨🇦 <strong>USA & Canada:</strong> €9.40 EUR ($10.50 - $14.10 CAD)</li>
+                            <li>🇦🇺🇬🇧 <strong>UK & Oceania:</strong> €9.50 EUR / student / yr</li>
+                            <li>🇯🇵🇰🇷 <strong>Asia (Developed):</strong> €8.50 EUR / student / yr</li>
+                            <li>🇲🇽🇧🇷 <strong>Mexico & Brazil:</strong> €5.70 EUR (~$120 MXN / 34.60 BRL)</li>
+                            <li>🌎 <strong>LATAM / Central America:</strong> €3.50 - €3.90 EUR</li>
+                            <li>🌍 <strong>Africa & Developing regions:</strong> €2.90 EUR / student / yr</li>
+                        </ul>
+                    </div>
+
+                    <!-- Bloque 2: Privacidad y Detección No Intrusiva (Problema 1) -->
+                    <div style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff; margin-bottom: 10px; font-size: 0.8rem; color: #c5d1e0;" data-i18n="pricing_privacy_box">
+                        <strong>1. Non-Intrusive Regional Detection:</strong> Cloudflare detects the visitor's region automatically without requiring personal data, phone numbers, or LADA codes. Pricing is scaled by purchasing power parity (PPP), school volume, and local compliance costs.
+                    </div>
+
+                    <!-- Bloque 3: Cobro Seguro y Llaves de Acceso (Problema 2) -->
+                    <div style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff; margin-bottom: 10px; font-size: 0.8rem; color: #c5d1e0;" data-i18n="pricing_tokens_box">
+                        <strong>2. Institutional Access Keys:</strong> Schools complete institutional payment securely (bank transfer or corporate card). BENEATH generates a cryptographic Master Token (e.g., `BENEATH-COL-SAN-JOSE-2026`) distributed by the director. Parents join privately with zero personal data collection.
+                    </div>
+
+                    <!-- Bloque 4: Automatización y Expiración (Problema 3) -->
+                    <div style="background: rgba(15, 28, 48, 0.5); padding: 8px 10px; border-radius: 6px; border-left: 2px solid #00f3ff; margin-bottom: 12px; font-size: 0.8rem; color: #c5d1e0;" data-i18n="pricing_supabase_box">
+                        <strong>3. Automated Expiration (Supabase):</strong> Group lifecycles are managed dynamically via Supabase. Upon license expiration or trial completion, access is automatically revoked without manual file deletion on GitHub or Cloudflare.
+                    </div>
+
+                    <!-- Botón directo para solicitar demo o cotización -->
+                    <button onclick="navigateTo('support')" style="background: #00f3ff; color: #03070d; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 0.85rem; width: 100%; margin-bottom: 10px;" data-i18n="pricing_btn_inquire">REQUEST PRIVATE QUOTE & SCHOOL DEMO</button>
+
+                    <button class="vault-btn" onclick="navigateTo('home')" style="width: auto; padding: 8px 16px;">
+                        <span data-i18n="btn_home">BACK TO HOME</span>
+                    </button>
+                </div>
+
                 <button class="cta-secure-mode" onclick="navigateTo('secure')" data-i18n="cta_secure">ACTIVATE SECURE MODE</button>
             </main>
 

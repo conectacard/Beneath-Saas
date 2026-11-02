@@ -65,6 +65,7 @@ function navigateTo(section) {
     const complianceView = document.getElementById('compliance-view');
     const faqView = document.getElementById('faq-view');
     const supportView = document.getElementById('support-view');
+    const pricingView = document.getElementById('pricing-view');
 
     // Oculta todos los paneles por defecto
     if (menuGrid) menuGrid.style.display = 'none';
@@ -72,6 +73,7 @@ function navigateTo(section) {
     if (complianceView) complianceView.style.display = 'none';
     if (faqView) faqView.style.display = 'none';
     if (supportView) supportView.style.display = 'none';
+    if (pricingView) pricingView.style.display = 'none';
 
     if (section === 'privacy') {
         if (aboutView) aboutView.style.display = 'block';
@@ -81,6 +83,8 @@ function navigateTo(section) {
         if (faqView) faqView.style.display = 'block';
     } else if (section === 'support') {
         if (supportView) supportView.style.display = 'block';
+    } else if (section === 'pricing') {
+        if (pricingView) pricingView.style.display = 'block';
     } else if (section === 'home') {
         if (menuGrid) menuGrid.style.display = 'grid';
         // Detiene el video incrustado del FAQ al volver al HOME
