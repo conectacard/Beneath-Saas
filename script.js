@@ -104,18 +104,20 @@ function navigateTo(section) {
 // --- BANCO DE ENLACES Y SELECTOR DE IDIOMAS PARA EL VIDEO EMBEBIDO DE FAQ ---
 document.addEventListener("DOMContentLoaded", function() {
     const videoLinks = {
-        'en': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'es': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'pt': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'fr': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'de': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'it': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'ja': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'zh': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'ko': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'ar': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'tr': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s',
-        'ru': 'https://www.youtube.com/watch?v=FWzv4t-TkB8&t=5s'
+        'en': 'https://www.youtube.com/watch?v=_bScHMX92xk',
+        'es': 'https://www.youtube.com/watch?v=80KK8u-0_qU',
+        'pt': 'https://www.youtube.com/watch?v=qOxsepzv2K0',
+        'fr': 'https://www.youtube.com/watch?v=nLOMWH2BOXo',
+        'de': 'https://www.youtube.com/watch?v=FlLDXNPgmbM',
+        'it': 'https://www.youtube.com/watch?v=PmirXtg8ZtI',
+        'ja': 'https://www.youtube.com/watch?v=TcXcDa_veds',
+        'zh': 'https://www.youtube.com/watch?v=b6P4sujtrSg',
+        'ko': 'https://www.youtube.com/watch?v=b2nd6HQvAbs',
+        'ar': 'https://www.youtube.com/watch?v=f_8gXBaBxpU',
+        'tr': 'https://www.youtube.com/watch?v=UVO4abyO_z0',
+        'ru': 'https://www.youtube.com/watch?v=DIKpncNKQzE',
+        'sv': 'https://www.youtube.com/watch?v=-qWlmm5a6yw',
+        'nl': 'https://www.youtube.com/watch?v=mnv-ebrYpwE'
     };
 
     const faqSelector = document.getElementById('faq-video-lang-selector');
