@@ -52,6 +52,13 @@ document.addEventListener("DOMContentLoaded", function() {
             syncPresentationVideo(e.target.value);
             console.log(`Cambiando video institucional a idioma: ${e.target.value}`);
         });
+
+        videoLinkTag.addEventListener('click', function() {
+            const faqIframe = document.getElementById('faq-embedded-iframe');
+            if (faqIframe) {
+                faqIframe.src = '';
+            }
+        });
     }
 
     document.addEventListener('beneath:langChange', function(e) {
