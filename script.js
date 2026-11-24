@@ -97,23 +97,45 @@ function navigateTo(section) {
     if (supportView) supportView.style.display = 'none';
     if (pricingView) pricingView.style.display = 'none';
 
+    const faqIframe = document.getElementById('faq-embedded-iframe');
+    if (section !== 'faq' && faqIframe) {
+        faqIframe.src = '';
+    }
+
     if (section === 'privacy') {
         if (aboutView) aboutView.style.display = 'block';
     } else if (section === 'compliance') {
         if (complianceView) complianceView.style.display = 'block';
     } else if (section === 'faq') {
         if (faqView) faqView.style.display = 'block';
+        if (faqIframe && !faqIframe.src) {
+            const faqSelector = document.getElementById('faq-video-lang-selector');
+            const currentLang = (faqSelector && faqSelector.value) || localStorage.getItem('sipv_lang') || 'en';
+            const links = {
+                'en': '_bScHMX92xk',
+                'es': '80KK8u-0_qU',
+                'pt': 'qOxsepzv2K0',
+                'fr': 'nLOMWH2BOXo',
+                'de': 'FlLDXNPgmbM',
+                'it': 'PmirXtg8ZtI',
+                'ja': 'TcXcDa_veds',
+                'zh': 'b6P4sujtrSg',
+                'ko': 'b2nd6HQvAbs',
+                'ar': 'f_8gXBaBxpU',
+                'tr': 'UVO4abyO_z0',
+                'ru': 'DIKpncNKQzE',
+                'sv': '-qWlmm5a6yw',
+                'nl': 'mnv-ebrYpwE'
+            };
+            const vidId = links[currentLang] || links['en'];
+            faqIframe.src = `https://www.youtube.com/embed/${vidId}`;
+        }
     } else if (section === 'support') {
         if (supportView) supportView.style.display = 'block';
     } else if (section === 'pricing') {
         if (pricingView) pricingView.style.display = 'block';
     } else if (section === 'home') {
         if (menuGrid) menuGrid.style.display = 'grid';
-        // Detiene el video incrustado del FAQ al volver al HOME
-        const faqIframe = document.getElementById('faq-embedded-iframe');
-        if (faqIframe) {
-            faqIframe.src = '';
-        }
     } else {
         if (menuGrid) menuGrid.style.display = 'grid';
     }
