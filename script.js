@@ -26,20 +26,42 @@ document.addEventListener("DOMContentLoaded", function() {
     const videoLinkTag = document.querySelector('.video-card-link');
     const videoHeaderBadge = document.getElementById('video-header-badge');
 
+    function syncPresentationVideo(lang) {
+        const targetLang = videoLinks[lang] ? lang : 'en';
+        const targetUrl = videoLinks[targetLang] || videoLinks['en'];
+
+        if (videoLinkTag && targetUrl) {
+            videoLinkTag.href = targetUrl;
+        }
+
+        if (videoSelector) {
+            const optionExists = Array.from(videoSelector.options).some(opt => opt.value === targetLang);
+            videoSelector.value = optionExists ? targetLang : 'en';
+        }
+
+        if (videoHeaderBadge) {
+            const langLabel = videoSelector && videoSelector.selectedIndex >= 0
+                ? videoSelector.options[videoSelector.selectedIndex].text.split(' ')[0].toUpperCase()
+                : targetLang.toUpperCase();
+            videoHeaderBadge.innerText = `COMPANY OVERVIEW - ${langLabel} VIDEO`;
+        }
+    }
+
     if (videoSelector && videoLinkTag) {
         videoSelector.addEventListener('change', function(e) {
-            const selectedLang = e.target.value;
-            if (videoLinks[selectedLang]) {
-                videoLinkTag.href = videoLinks[selectedLang];
-                
-                // Actualiza el texto superior del módulo del video dinámicamente
-                const langName = e.target.options[e.target.selectedIndex].text.split(' ')[0].toUpperCase();
-                videoHeaderBadge.innerText = `COMPANY OVERVIEW - ${langName} VIDEO`;
-                
-                console.log(`Cambiando video institucional a idioma: ${selectedLang}`);
-            }
+            syncPresentationVideo(e.target.value);
+            console.log(`Cambiando video institucional a idioma: ${e.target.value}`);
         });
     }
+
+    document.addEventListener('beneath:langChange', function(e) {
+        if (e.detail && e.detail.lang) {
+            syncPresentationVideo(e.detail.lang);
+        }
+    });
+
+    const savedPresentationLang = localStorage.getItem('sipv_lang') || 'en';
+    syncPresentationVideo(savedPresentationLang);
 });
 
 /**
@@ -129,19 +151,42 @@ document.addEventListener("DOMContentLoaded", function() {
         return (match && match[2].length === 11) ? match[2] : null;
     }
 
+    function syncFaqVideo(lang, autoplay) {
+        const targetLang = videoLinks[lang] ? lang : 'en';
+        const targetUrl = videoLinks[targetLang] || videoLinks['en'];
+
+        if (faqSelector) {
+            const optionExists = Array.from(faqSelector.options).some(opt => opt.value === targetLang);
+            if (optionExists) {
+                faqSelector.value = targetLang;
+            }
+        }
+
+        if (faqIframe && targetUrl) {
+            const vidId = getYouTubeId(targetUrl);
+            if (vidId) {
+                faqIframe.src = autoplay
+                    ? `https://www.youtube.com/embed/${vidId}?autoplay=1`
+                    : `https://www.youtube.com/embed/${vidId}`;
+            }
+        }
+    }
+
     if (faqSelector && faqIframe) {
         faqSelector.addEventListener('change', function(e) {
-            const lang = e.target.value;
-            const targetUrl = videoLinks[lang];
-            if (targetUrl) {
-                const vidId = getYouTubeId(targetUrl);
-                if (vidId) {
-                    faqIframe.src = `https://www.youtube.com/embed/${vidId}?autoplay=1`;
-                    console.log(`Video incrustado cambiado a idioma: ${lang}`);
-                }
-            }
+            syncFaqVideo(e.target.value, true);
+            console.log(`Video incrustado cambiado a idioma: ${e.target.value}`);
         });
     }
+
+    document.addEventListener('beneath:langChange', function(e) {
+        if (e.detail && e.detail.lang) {
+            syncFaqVideo(e.detail.lang, false);
+        }
+    });
+
+    const savedFaqLang = localStorage.getItem('sipv_lang') || 'en';
+    syncFaqVideo(savedFaqLang, false);
 });
 
 // --- CONTROLADOR DEL MODAL DE VIDEO FLOTANTE ---

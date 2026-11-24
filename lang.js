@@ -100,6 +100,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Institutional Access Keys:</strong> Schools complete institutional payment securely (bank transfer or corporate card). BENEATH generates a cryptographic Master Token (e.g., <code>BENEATH-COL-SAN-JOSE-2026</code>) distributed by the director. Parents join privately with zero personal data collection.",
         pricing_supabase_box: "<strong>3. Automated Expiration (Supabase):</strong> Group lifecycles are managed dynamically via Supabase. Upon license expiration or trial completion, access is automatically revoked without manual file deletion on GitHub or Cloudflare.",
         pricing_btn_inquire: "REQUEST PRIVATE QUOTE & SCHOOL DEMO",
+        tagline: "PROTECT YOUR SCHOOL FROM HACKING AND EXTORTION. Anyone outside can access WhatsApp.",
     },
     es: {
         lang_label: "Idioma:",
@@ -202,6 +203,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Llaves de Acceso Institucional:</strong> Las escuelas completan el pago institucional de forma segura (transferencia bancaria o tarjeta corporativa). BENEATH genera un Token Maestro criptográfico (ej. <code>BENEATH-COL-SAN-JOSE-2026</code>) distribuido por el director. Los padres se unen en privado sin recopilación de datos personales.",
         pricing_supabase_box: "<strong>3. Expiración Automatizada (Supabase):</strong> Los ciclos de vida de los grupos se gestionan dinámicamente mediante Supabase. Al vencer la licencia o finalizar la prueba, el acceso se revoca automáticamente sin borrado manual de archivos en GitHub o Cloudflare.",
         pricing_btn_inquire: "SOLICITAR COTIZACIÓN PRIVADA Y DEMO ESCOLAR",
+        tagline: "PROTEGE A TU ESCUELA DE HACKEO Y EXTORSIONES. Cualquier persona ajena puede tener acceso a WhatsApp.",
     },
     pt: {
         lang_label: "Idioma:",
@@ -304,6 +306,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Chaves de Acesso Institucional:</strong> As escolas concluem o pagamento institucional com segurança (transferência bancária ou cartão corporativo). O BENEATH gera um Token Mestre criptográfico (ex. <code>BENEATH-COL-SAN-JOSE-2026</code>) distribuído pelo diretor. Os pais entram de forma privada sem coleta de dados pessoais.",
         pricing_supabase_box: "<strong>3. Expiração Automatizada (Supabase):</strong> Os ciclos de vida dos grupos são gerenciados dinamicamente via Supabase. Após o vencimento da licença ou conclusão do teste, o acesso é revogado automaticamente sem exclusão manual de arquivos no GitHub ou Cloudflare.",
         pricing_btn_inquire: "SOLICITAR ORÇAMENTO PRIVADO E DEMONSTRAÇÃO ESCOLAR",
+        tagline: "PROTEJA SUA ESCOLA CONTRA HACKEAMENTO E EXTORSAO. Qualquer pessoa de fora pode ter acesso ao WhatsApp.",
     },
     fr: {
         lang_label: "Langue :",
@@ -406,6 +409,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Clés d'Accès Institutionnel :</strong> Les écoles effectuent le paiement institutionnel en toute sécurité (virement bancaire ou carte d'entreprise). BENEATH génère un jeton maître cryptographique (ex. <code>BENEATH-COL-SAN-JOSE-2026</code>) distribué par le directeur. Les parents rejoignent en privé sans collecte de données personnelles.",
         pricing_supabase_box: "<strong>3. Expiration Automatisée (Supabase) :</strong> Les cycles de vie des groupes sont gérés dynamiquement via Supabase. Dès l'expiration de la licence ou la fin de l'essai, l'accès est automatiquement révoqué sans suppression manuelle de fichiers sur GitHub ou Cloudflare.",
         pricing_btn_inquire: "DEMANDER UN DEVIS PRIVÉ ET UNE DÉMO SCOLAIRE",
+        tagline: "PROTEGEZ VOTRE ECOLE DU PIRATAGE ET DE L'EXTORSION. Toute personne exterieure peut acceder a WhatsApp.",
     },
     de: {
         lang_label: "Sprache:",
@@ -508,6 +512,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Institutionelle Zugangsschlüssel:</strong> Schulen wickeln die institutionelle Zahlung sicher ab (Überweisung oder Firmenkarte). BENEATH generiert ein kryptografisches Master-Token (z. B. <code>BENEATH-COL-SAN-JOSE-2026</code>), das vom Schulleiter verteilt wird. Eltern treten privat bei, ohne dass persönliche Daten erhoben werden.",
         pricing_supabase_box: "<strong>3. Automatisierter Ablauf (Supabase):</strong> Gruppenlebenszyklen werden dynamisch über Supabase verwaltet. Nach Ablauf der Lizenz oder des Testzeitraums wird der Zugriff automatisch widerrufen, ohne dass Dateien manuell auf GitHub oder Cloudflare gelöscht werden müssen.",
         pricing_btn_inquire: "PRIVATES ANGEBOT & SCHULDEMO ANFORDERN",
+        tagline: "SCHUTZEN SIE IHRE SCHULE VOR HACKING UND ERPRESSUNG. Jede aussenstehende Person kann auf WhatsApp zugreifen.",
     },
     ko: {
         lang_label: "언어:",
@@ -610,6 +615,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. 기관 액세스 키:</strong> 학교는 기관 결제를 안전하게 완료합니다(은행 송금 또는 법인 카드). BENEATH는 교장이 배포하는 암호화된 마스터 토큰(예: <code>BENEATH-COL-SAN-JOSE-2026</code>)을 생성합니다. 학부모는 개인정보 수집 없이 비공개로 참여합니다.",
         pricing_supabase_box: "<strong>3. 자동 만료(Supabase):</strong> 그룹 수명 주기는 Supabase를 통해 동적으로 관리됩니다. 라이선스 만료 또는 평가판 완료 시 GitHub나 Cloudflare에서 수동으로 파일을 삭제하지 않고도 액세스가 자동으로 취소됩니다.",
         pricing_btn_inquire: "개인 견적 및 학교 데모 요청",
+        tagline: "해킹과 협박으로부터 학교를 보호하세요. 외부인 누구나 WhatsApp에 접근할 수 있습니다.",
     },
     zh: {
         lang_label: "语言：",
@@ -707,6 +713,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. 机构访问密钥：</strong>学校通过安全方式完成机构付款（银行转账或企业卡）。BENEATH生成由校长分发的加密主令牌（例如：<code>BENEATH-COL-SAN-JOSE-2026</code>）。家长在无个人数据收集的情况下私密加入。",
         pricing_supabase_box: "<strong>3. 自动过期（Supabase）：</strong>群组生命周期通过Supabase动态管理。许可证到期或试用结束后，访问权限将自动吊销，无需在GitHub或Cloudflare上手动删除文件。",
         pricing_btn_inquire: "申请私密报价与学校演示",
+        tagline: "保护您的学校免受黑客攻击和勒索。任何外部人员都可能访问 WhatsApp。",
     },
     ja: {
         lang_label: "言語:",
@@ -809,6 +816,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. 機関アクセスキー：</strong>学校は安全な方法で機関支払いを完了します（銀行振込または法人カード）。BENEATHは校長が配布する暗号化マスター・トークン（例：<code>BENEATH-COL-SAN-JOSE-2026</code>）を生成します。保護者は個人情報の収集なしでプライベートに参加します。",
         pricing_supabase_box: "<strong>3. 自動失効（Supabase）：</strong>グループのライフサイクルはSupabaseを介して動的に管理されます。ライセンスの期限切れまたは試用版の終了時に、GitHubやCloudflareで手動ファイル削除を行わずにアクセスが自動的に取り消されます。",
         pricing_btn_inquire: "個別見積もりおよび学校デモをリクエスト",
+        tagline: "ハッキングや恐喝から学校を守りましょう。外部の誰でもWhatsAppにアクセスできる可能性があります。",
     },
     it: {
         lang_label: "Lingua:",
@@ -911,6 +919,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Chiavi di Accesso Istituzionale:</strong> Le scuole completano il pagamento istituzionale in modo sicuro (bonifico bancario o carta aziendale). BENEATH genera un Token Master crittografico (es. <code>BENEATH-COL-SAN-JOSE-2026</code>) distribuito dal dirigente. I genitori si uniscono privatamente senza raccolta di dati personali.",
         pricing_supabase_box: "<strong>3. Scadenza Automatizzata (Supabase):</strong> I cicli di vita dei gruppi sono gestiti dinamicamente tramite Supabase. Alla scadenza della licenza o al termine della prova, l'accesso viene revocato automaticamente senza eliminazione manuale dei file su GitHub o Cloudflare.",
         pricing_btn_inquire: "RICHIEDI PREVENTIVO PRIVATO E DEMO SCOLASTICA",
+        tagline: "PROTEGGI LA TUA SCUOLA DA HACKING ED ESTORSIONI. Chiunque all'esterno puo accedere a WhatsApp.",
     },
     hi: {
         lang_label: "भाषा:",
@@ -1013,6 +1022,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. संस्थागत एक्सेस कुंजियाँ:</strong> स्कूल सुरक्षित रूप से संस्थागत भुगतान पूरा करते हैं (बैंक हस्तांतरण या कॉर्पोरेट कार्ड)। BENEATH एक क्रिप्टोग्राफिक मास्टर टोकन (जैसे <code>BENEATH-COL-SAN-JOSE-2026</code>) उत्पन्न करता है जिसे प्राचार्य द्वारा वितरित किया जाता है। माता-पिता बिना किसी व्यक्तिगत डेटा संग्रह के निजी तौर पर शामिल होते हैं।",
         pricing_supabase_box: "<strong>3. स्वचालित समाप्ति (Supabase):</strong> समूह जीवनचक्र Supabase के माध्यम से गतिशील रूप से प्रबंधित किए जाते हैं। लाइसेंस की समाप्ति या परीक्षण पूरा होने पर, GitHub या Cloudflare पर मैन्युअल फ़ाइल हटाए बिना एक्सेस स्वचालित रूप से रद्द कर दिया जाता है.",
         pricing_btn_inquire: "निजी उद्धरण और स्कूल डेमो का अनुरोध करें",
+        tagline: "अपने स्कूल को हैकिंग और जबरन वसूली से बचाएं। कोई भी बाहरी व्यक्ति WhatsApp तक पहुंच सकता है।",
     },
     ar: {
         lang_label: "اللغة:",
@@ -1115,6 +1125,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. مفاتيح الوصول المؤسسي:</strong> تكمل المدارس الدفع المؤسسي بشكل آمن (تحويل بنكي أو بطاقة مؤسسية). ينشئ BENEATH رمزًا رئيسيًا مشفرًا (مثل <code>BENEATH-COL-SAN-JOSE-2026</code>) يتم توزيعه بواسطة المدير. ينضم أولياء الأمور بشكل خاص دون جمع أي بيانات شخصية.",
         pricing_supabase_box: "<strong>3. انتهاء الصلاحية التلقائي (Supabase):</strong> تتم إدارة دورات حياة المجموعات ديناميكيًا عبر Supabase. عند انتهاء صلاحية الترخيص أو اكتمال التجربة، يتم إلغاء الوصول تلقائيًا دون الحاجة إلى حذف الملفات يدويًا على GitHub أو Cloudflare.",
         pricing_btn_inquire: "طلب عرض أسعار خاص وعرض تجريبي للمدرسة",
+        tagline: "احمِ مدرستك من الاختراق والابتزاز. يمكن لأي شخص خارجي الوصول إلى واتساب.",
     },
     tr: {
         lang_label: "Dil:",
@@ -1217,6 +1228,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Kurumsal Erişim Anahtarları:</strong> Okullar kurumsal ödemeyi güvenli bir şekilde tamamlar (banka havalesi veya kurumsal kart). BENEATH, müdür tarafından dağıtılan şifreli bir Ana Token (örn. <code>BENEATH-COL-SAN-JOSE-2026</code>) oluşturur. Veliler hiçbir kişisel veri toplanmadan özel olarak katılır.",
         pricing_supabase_box: "<strong>3. Otomatik Sona Erme (Supabase):</strong> Grup yaşam döngüleri Supabase aracılığıyla dinamik olarak yönetilir. Lisans süresi dolduğunda veya deneme tamamlandığında, GitHub veya Cloudflare üzerinde manuel dosya silme işlemine gerek kalmadan erişim otomatik olarak iptal edilir.",
         pricing_btn_inquire: "ÖZEL TEKLİF VE OKUL DEMOSU TALEP ET",
+        tagline: "OKULUNUZU HACKLENME VE SANTAJDAN KORUYUN. Disaridan herkes WhatsApp'a erisebilir.",
     },
     ru: {
         lang_label: "Язык:",
@@ -1319,6 +1331,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Институциональные ключи доступа:</strong> Школы осуществляют институциональную оплату безопасным способом (банковский перевод или корпоративная карта). BENEATH создает зашифрованный мастер-токен (например, <code>BENEATH-COL-SAN-JOSE-2026</code>), распространяемый директором. Родители присоединяются конфиденциально без сбора личных данных.",
         pricing_supabase_box: "<strong>3. Автоматическое истечение срока (Supabase):</strong> Жизненные циклы групп управляются динамически через Supabase. По истечении срока действия лицензии или завершения пробного периода доступ автоматически аннулируется без ручного удаления файлов на GitHub или Cloudflare.",
         pricing_btn_inquire: "ЗАПРОСИТЬ ИНДИВИДУАЛЬНУЮ СМЕТУ И ШКОЛЬНУЮ ДЕМО-ВЕРСИЮ",
+        tagline: "ЗАЩИТИТЕ ШКОЛУ ОТ ВЗЛОМА И ВЫМОГАТЕЛЬСТВА. Доступ к WhatsApp может получить любой посторонний.",
     },
     sv: {
         lang_label: "Språk:",
@@ -1421,6 +1434,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Institutionella Åtkomstnycklar:</strong> Skolor slutför den institutionella betalningen säkert (banköverföring eller företagskort). BENEATH genererar en kryptografisk Master-token (t.ex. <code>BENEATH-COL-SAN-JOSE-2026</code>) som distribueras av rektorn. Föräldrar ansluter privat utan insamling av personuppgifter.",
         pricing_supabase_box: "<strong>3. Automatisk Utgång (Supabase):</strong> Gruppens livscykler hanteras dynamiskt via Supabase. Vid licensens utgång eller provperiodens slut återkallas åtkomsten automatiskt utan manuell radering av filer på GitHub eller Cloudflare.",
         pricing_btn_inquire: "BEÄR PRIVAT OFFERT & SKOLDEMO",
+        tagline: "SKYDDA DIN SKOLA MOT HACKNING OCH UTPRESSNING. Vem som helst utanfor kan fa atgang till WhatsApp.",
     },
     nl: {
         lang_label: "Taal:",
@@ -1523,6 +1537,7 @@ const DICTIONARY = {
         pricing_tokens_box: "<strong>2. Institutionele Toegangssleutels:</strong> Scholen voltooien de institutionele betaling veilig (bankoverschrijving of bedrijfskaart). BENEATH genereert een cryptografisch Master Token (bijv. <code>BENEATH-COL-SAN-JOSE-2026</code>) verspreid door de directeur. Ouders sluiten zich privé aan zonder verzameling van persoonlijke gegevens.",
         pricing_supabase_box: "<strong>3. Geautomatiseerde Vervaldatum (Supabase):</strong> Groepslevenscycli worden dynamisch beheerd via Supabase. Bij het aflopen van de licentie of voltooiing van de proefperiode wordt de toegang automatisch ingetrokken zonder handmatige verwijdering van bestanden op GitHub of Cloudflare.",
         pricing_btn_inquire: "PRIVÉ OFFERTE & SCHOOLDEMO AANVRAGEN",
+        tagline: "BESCHERM JE SCHOOL TEGEN HACKEN EN AFPERSING. Iedereen van buitenaf heeft toegang tot WhatsApp.",
     }
 };
 
@@ -1537,6 +1552,8 @@ function cambiarIdioma(lang) {
             el.innerHTML = DICTIONARY[lang][key];
         }
     });
+
+    document.dispatchEvent(new CustomEvent('beneath:langChange', { detail: { lang: lang } }));
 }
 
 document.addEventListener("DOMContentLoaded", () => {

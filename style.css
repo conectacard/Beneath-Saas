@@ -1,5 +1,7 @@
 /* Reset y Variables Globales */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -343,25 +345,54 @@ body, html {
 
 /* Responsividad */
 @media (max-width: 1100px) {
+    .bunker-container {
+        height: auto;
+        min-height: 100vh;
+        padding: 12px 14px 20px 14px;
+        gap: 10px;
+    }
+    .brand-header {
+        margin-top: 38px;
+    }
     .main-workspace {
         flex-direction: column;
-        gap: 20px;
+        gap: 14px;
     }
     .video-preview-module, .phone-mockup-container {
         display: block;
         width: 100%;
-        max-width: 280px;
+        max-width: 320px;
         margin: 0 auto;
+    }
+    .video-thumbnail-box {
+        height: 110px;
+    }
+    .vault-panel {
+        padding: 14px;
+        gap: 12px;
+    }
+    .menu-grid {
+        gap: 8px;
+    }
+    .vault-btn {
+        padding: 10px 6px;
+        gap: 6px;
+    }
+    .vault-btn .btn-text {
+        font-size: 8.5px;
+        line-height: 1.25;
+        word-break: break-word;
+    }
+    .cta-secure-mode {
+        padding: 11px;
+        font-size: 11px;
     }
     .phone-mockup-container {
         transform: none;
+        max-width: 220px;
     }
     body, html {
         overflow: auto;
-    }
-    .bunker-container {
-        height: auto;
-        min-height: 100vh;
     }
 }
 /* Selector interno para los videos por idioma */
